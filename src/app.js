@@ -25,16 +25,19 @@ window.onload = () => {
   let randomSym = symbols[Math.floor(Math.random() * symbols.length)];
   let upSuit = document.getElementById("upSuit");
   let downSuit = document.getElementById("downSuit");
+  let num = document.getElementById("number");
   upSuit.innerHTML = randomSym;
-  document.getElementById("number").innerHTML = generateRandomNumber();
+  num.innerHTML = generateRandomNumber();
   downSuit.innerHTML = randomSym;
 
-  if (randomSym == "&hearts;" || randomSym == "&diams") {
+  if (randomSym == "&hearts;" || randomSym == "&diams;") {
     upSuit.style.color = "red";
     downSuit.style.color = "red";
+    num.style.color = "red";
   } else {
     upSuit.style.color = "black";
     downSuit.style.color = "black";
+    num.style.color = "black";
   }
 };
 
@@ -42,3 +45,5 @@ function generateRandomNumber() {
   let randomNum = numbers[Math.floor(Math.random() * numbers.length)];
   return randomNum;
 }
+const element = document.getElementById("button");
+element.addEventListener("click", window.onload);
