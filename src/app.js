@@ -20,7 +20,10 @@ const numbers = [
   "Q",
   "K"
 ];
-
+function generateRandomNumber() {
+  let randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+  return randomNum;
+}
 window.onload = () => {
   let randomSym = symbols[Math.floor(Math.random() * symbols.length)];
   let upSuit = document.getElementById("upSuit");
@@ -41,9 +44,5 @@ window.onload = () => {
   }
 };
 
-function generateRandomNumber() {
-  let randomNum = numbers[Math.floor(Math.random() * numbers.length)];
-  return randomNum;
-}
 const element = document.getElementById("button");
 element.addEventListener("click", window.onload);
